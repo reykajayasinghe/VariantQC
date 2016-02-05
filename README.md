@@ -14,5 +14,9 @@ Main QC script is run using bsub_qc.sh, which initiates the main qc_pipeline.sh.
 7. Reclassify germline, somatic, and loh based on read count data of somatic events.  
 8. Making VCFs for filtered pindel output for VEP input & annotate final filtered VCF using VEP.
 
-
+#Before Starting
+Download VEP (http://useast.ensembl.org/info/docs/tools/vep/script/vep_tutorial.html?redirect=no)
+* Change line 28 in qc_pipeline.sh to directory of reference fasta.
+* Change line 30 in qc_pipeline.sh to contain directory of VEP.
+* Change line 37-38 in germline_somatic_loh_3.pl to set up rules to identify tumor and normal sample by sample name
 Reyka Jayasinghe (rjayasin@genome.wustl.edu) and Steven Foltz (sfoltz@genome.wustl.edu).
